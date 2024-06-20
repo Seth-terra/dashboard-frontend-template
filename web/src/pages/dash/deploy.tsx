@@ -335,7 +335,7 @@ export default function DeployPage() {
               errorMessage={errors.serverName?.message}
               label="Name"
             />
-            <h4 className="mt-6 text-gray-700 font-display dark:text-white font-semibold uppercase">
+            <h4 className="mt-6 text-gray-700 font-semibold font-display uppercase dark:text-white">
               Configure port forwards
             </h4>
             {!hostnode && (
