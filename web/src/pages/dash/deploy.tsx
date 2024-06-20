@@ -155,7 +155,7 @@ export default function DeployPage() {
     <>
       <Head title={`Deploy a cloud GPU`} />
       <DashBlock header="Deploy a new cloud GPU">
-        <div className="mt-4 text-neutral-400 font-400">
+        <div className="mt-4 text-gray-500 font-400 dark:text-neutral-400">
           <p>Customize your own server, fully a la carte.</p>
           <ButtonLink
             to={constants.INFRASTRUCTURE_URL}
@@ -175,7 +175,7 @@ export default function DeployPage() {
               Select an available GPU
             </h3>
             <div className="mb-4 mt-2 space-y-2">
-              <span className="block text-gray-400 md:inline">
+              <span className="block text-gray-500 md:inline dark:text-neutral-400">
                 Need InfiniBand or custom deployments?
               </span>
               <ButtonLink
@@ -205,7 +205,7 @@ export default function DeployPage() {
                         {constants.GPU_INFO[gpu].shortName}
                         <div className="mt-auto pt-2">
                           <div
-                            className={`px-3 py-1 bg-primary-500/20 rounded-btn text-base ${isSelected ? 'text-white ring-1 ring-white/30' : 'text-primary-300'}`}
+                            className={`px-3 py-1 bg-primary-500/20 rounded-btn text-base ${isSelected ? 'text-white ring-1 ring-white/30' : 'text-primary-500 dark:text-primary-300'}`}
                           >
                             {api.getVRAM(gpu)}GB
                           </div>
@@ -335,17 +335,17 @@ export default function DeployPage() {
               errorMessage={errors.serverName?.message}
               label="Name"
             />
-            <h4 className="mt-6 text-neutral-200 font-semibold font-display uppercase">
+            <h4 className="mt-6 text-gray-700 font-display dark:text-white font-semibold uppercase">
               Configure port forwards
             </h4>
             {!hostnode && (
-              <p className="text-neutral-400">
+              <p className="text-gray-500 dark:text-neutral-400">
                 Please select a location first.
               </p>
             )}
             {hostnode && (
               <>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-gray-500 dark:text-neutral-400">
                   You may forward up to 64 ports. The external port is where
                   requests will enter; the internal port is where you set the
                   requests to be forwarded to. We've by default included an SSH
@@ -353,7 +353,7 @@ export default function DeployPage() {
                   access your instance once created.
                 </p>
                 <div className="mt-2 flex flex-col gap-2">
-                  <div className="grid grid-cols-[1fr_1fr_40px] gap-2 text-sm text-neutral-400">
+                  <div className="grid grid-cols-[1fr_1fr_40px] gap-2 text-sm text-gray-500 dark:text-neutral-400">
                     <div>External Port</div>
                     <div>Internal Port</div>
                   </div>
@@ -368,7 +368,7 @@ export default function DeployPage() {
                         <label className="flex flex-col">
                           <select
                             {...register(`portForwards.${idx}.from`)}
-                            className="rounded-input bg-neutral-800 px-4 py-2"
+                            className="rounded-input bg-white px-4 py-2 ring-1 ring-gray-300 dark:bg-neutral-800 dark:ring-0"
                           >
                             {swappablePorts.map((externalPort) => (
                               <option
@@ -387,7 +387,7 @@ export default function DeployPage() {
                                 animate={{ height: 'auto' }}
                                 exit={{ height: 0 }}
                               >
-                                <div className="mt-1 text-sm text-red-500">
+                                <div className="mt-1 text-sm text-red-500 dark:text-red-400">
                                   {errors.portForwards?.[idx]?.from?.message}.
                                 </div>
                               </m.div>
@@ -402,7 +402,7 @@ export default function DeployPage() {
                         <button
                           type="button"
                           onClick={() => portForwardsFieldArray.remove(idx)}
-                          className="i-tabler-trash my-[10px] h-[20px] w-[40px] text-red-500 opacity-50 transition-opacity disabled:hidden hover:opacity-100"
+                          className="i-tabler-trash my-[10px] h-[20px] w-[40px] text-red-500 opacity-50 transition-opacity disabled:hidden dark:text-red-400 dark:opacity-70 hover:opacity-100"
                           disabled={idx === 0}
                         >
                           <div className="sr-only">Delete</div>
@@ -417,7 +417,7 @@ export default function DeployPage() {
                     portForwardsFieldArray.append({ from: '', to: '' })
                   }
                   disabled={portForwards.length >= 64}
-                  className="rounded-btn px-4 py-2 ring-1 ring-neutral-500 transition-colors hover:bg-neutral-800"
+                  className="rounded-btn px-4 py-2 ring-1 ring-gray-300 transition-colors hover:bg-gray-100 dark:ring-2 dark:ring-neutral-500 dark:hover:bg-neutral-600"
                 >
                   <div className="i-tabler-plus mr-2 inline-block translate-y-[2px]" />
                   Add forwarding
@@ -444,7 +444,7 @@ export default function DeployPage() {
                 className="flex flex-col overflow-hidden"
               >
                 <label className="flex flex-col p-1 pt-4">
-                  <div className="mb-1 text-sm text-neutral-400">
+                  <div className="mb-1 text-sm text-gray-500 dark:text-neutral-400">
                     Cloudinit Script
                   </div>
                   <textarea
@@ -457,7 +457,7 @@ export default function DeployPage() {
     owner: user:user 
 runcmd:
   - docker run -d --restart unless-stopped --stop-timeout 300 -v /home/user/cloudinit_website:/usr/share/nginx/html:ro -p 80:80 --name default_container nginx`}
-                    className="rounded-input bg-neutral-800 px-2 py-1 text-sm font-mono placeholder:text-neutral-500"
+                    className="rounded-input px-2 py-1 text-sm font-mono ring-1 ring-gray-300 dark:bg-neutral-800 dark:ring-none dark:placeholder:text-neutral-500"
                     rows={11}
                   />
                 </label>
@@ -472,7 +472,7 @@ runcmd:
           </h3>
           {specs.gpu_model ? (
             <div className="mt-4 flex flex-col">
-              <p className="text-sm text-neutral-400">
+              <p className="text-sm text-gray-500 dark:text-neutral-400">
                 Your actual charge will be pro-rated to the millisecond your
                 server is deployed.
               </p>
@@ -493,17 +493,17 @@ runcmd:
                     : 'N/A'}
                 </span>
               </p>
-              <p className="mt-1 text-sm text-neutral-400">
+              <p className="mt-1 text-sm text-gray-500 dark:text-neutral-400">
                 Deposit more funds{' '}
                 <Link
                   to={constants.ROUTES.accountDeposit}
-                  className="font-medium underline transition-colors hover:text-neutral-400"
+                  className="font-medium underline hover:text-gray-500 dark:hover:text-neutral-300"
                 >
                   here
                 </Link>
                 .
               </p>
-              <p className="mt-6 text-sm text-neutral-400">
+              <p className="mt-6 text-sm text-gray-500 dark:text-neutral-400">
                 Email us at{' '}
                 <a href={`mailto:${constants.SALES_EMAIL}`}>
                   {constants.SALES_EMAIL}

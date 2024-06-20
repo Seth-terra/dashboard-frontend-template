@@ -19,7 +19,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </Suspense>
     <Toaster
       position="bottom-right"
-      toastOptions={{ className: 'bg-neutral-700 text-white' }}
+      toastOptions={{
+        className: 'font-sans dark:bg-neutral-700 dark:text-white',
+      }}
     />
   </React.StrictMode>
 );

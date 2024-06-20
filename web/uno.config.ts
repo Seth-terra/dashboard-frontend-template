@@ -2,7 +2,8 @@ import { defineConfig, presetIcons, presetUno, presetWebFonts } from 'unocss';
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    // To force dark/light mode, set this to { dark: 'class' } and (for dark mode) add the `dark` class to `body` in `index.html`.
+    presetUno({ dark: 'media' }),
     presetIcons(),
     presetWebFonts({
       provider: 'google',
@@ -30,6 +31,8 @@ export default defineConfig({
   ],
   theme: {
     colors: {
+      // Switch these out for alternative colors!
+      // See https://www.tailwindshades.com/ to generate your own palette.
       primary: {
         DEFAULT: '#3CACE2',
         50: '#E7F5FB',
@@ -47,7 +50,7 @@ export default defineConfig({
     },
     borderRadius: {
       // Input field corner radius
-      input: '.25rem',
+      input: '.5rem',
       // Button corner radius - set to '100rem' for fully rounded buttons!
       btn: '.25rem',
       // Larger buttons with more content inside
