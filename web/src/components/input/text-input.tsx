@@ -12,13 +12,13 @@ export default forwardRef<
   return (
     <label className="inline-flex flex-col">
       {label && (
-        <div className="mb-1 select-none text-sm text-gray-500">{label}</div>
+        <div className="mb-1 select-none text-sm text-neutral-400">{label}</div>
       )}
       <input
         type={type}
         {...props}
         ref={ref}
-        className={`rounded-input px-3 py-2 disabled:bg-gray-100 disabled:text-gray-500 ${errorMessage ? `ring-red-500 ring-2` : 'ring-gray-300 ring-1'}`}
+        className={`rounded-input px-3 py-2 bg-neutral-800 disabled:bg-neutral-600 disabled:text-neutral-400 placeholder:text-neutral-500 focus-visible:ring-2 outline-none focus-visible:ring-primary-500 ${errorMessage ? `ring-red-500 ring-2` : ''}`}
       />
       <AnimatePresence>
         {errorMessage && (

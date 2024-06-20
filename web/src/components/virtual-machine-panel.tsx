@@ -63,7 +63,7 @@ export default function VirtualMachinePanel({
         {vm.name}
       </h3>
       <div className="my-4 flex flex-col gap-6 px-8 lg:flex-row">
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-neutral-400">
           <p>
             <span className="i-tabler-map-pin mr-2 inline-block translate-y-[0.12em]" />
             {vm.city}, {vm.state}, {vm.country}
@@ -158,7 +158,7 @@ export default function VirtualMachinePanel({
           )}
         </div>
       </div>
-      <div className="my-4 px-8 text-sm text-gray-500">
+      <div className="my-4 px-8 text-sm text-neutral-400">
         <button onClick={() => setDetailsOpen((o) => !o)}>
           <span
             className={`i-tabler-chevron-down inline-block translate-y-[.15em] mr-2 transition-transform ${detailsOpen ? '' : '-rotate-90'}`}

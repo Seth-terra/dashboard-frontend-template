@@ -10,7 +10,7 @@ import { ROUTES } from '../../constants/pages';
 
 export default function FooterSection() {
   return (
-    <footer className="bg-primary-950 pt-18">
+    <footer className="bg-primary-900 pt-18">
       <div className="grid mx-auto mb-12 container md:grid-cols-[1fr_300px]">
         <div>
           <h3 className="px-4 text-xl text-white font-display">

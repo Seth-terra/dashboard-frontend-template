@@ -9,7 +9,7 @@ export default function BodySection() {
     <>
       <section className="bg-primary-50 px-4 pt-18">
         <div className="mx-auto w-full md:w-160 sm:w-120">
-          <h2 className="text-center text-2xl text-gray-7 font-medium font-display lg:text-4xl md:text-3xl">
+          <h2 className="text-center text-2xl text-gray-7 font-semibold font-display uppercase lg:text-4xl md:text-3xl">
             GPU platform of the future
           </h2>
           <p className="mt-4 max-w-prose text-lg text-gray-500">
@@ -58,7 +58,9 @@ export default function BodySection() {
                   <div className={`${icon} text-2xl`} />
                   {tagline}
                 </div>
-                <h3 className="mt-2 text-2xl font-display">{header}</h3>
+                <h3 className="mt-2 text-2xl font-semibold font-display uppercase">
+                  {header}
+                </h3>
                 <p className="mt-4 text-gray-500">{body}</p>
               </div>
             </li>

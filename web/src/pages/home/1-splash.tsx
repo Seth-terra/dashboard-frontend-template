@@ -67,7 +67,7 @@ export default function SplashSection() {
         <img src={BG_IMAGE_URL} className="hidden" />
         <div className="absolute inset-0 z-0 bg-black/25" />
         <nav
-          className={`fixed top-0 z-1 w-full transition-all duration-300 ${scrolledBelowSplash ? 'bg-primary-950 shadow-lg' : 'bg-primary-950/0'} ${menuOpen && !scrolledBelowSplash ? 'lg:bg-primary-950/0 max-lg:bg-primary-950' : ''}`}
+          className={`fixed top-0 z-1 w-full transition-all duration-300 ${scrolledBelowSplash ? 'bg-primary-900 shadow-lg' : 'bg-primary-900/0'} ${menuOpen && !scrolledBelowSplash ? 'lg:bg-primary-900/0 max-lg:bg-primary-900' : ''}`}
           ref={navbarRef}
         >
           <div className="mx-auto flex items-center px-4 py-3 container">
@@ -80,7 +80,7 @@ export default function SplashSection() {
                   <img
                     src={HOME_LOGO_IMAGE}
                     alt={LOGO_TEXT}
-                    className="h-[.9em] py-[.05em]"
+                    className="h-[2.5em] py-2"
                   />
                 ) : (
                   LOGO_TEXT

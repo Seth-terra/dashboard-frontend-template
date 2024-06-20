@@ -9,7 +9,7 @@ export default defineConfig({
       fonts: {
         // You can swap these out for any existing Google fonts!
         sans: [
-          { name: 'Open Sans', weights: ['300', '400', '500', '600', '700'] },
+          { name: 'Nunito Sans', weights: ['300', '400', '500', '600', '700'] },
           {
             name: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
             provider: 'none',
@@ -17,7 +17,7 @@ export default defineConfig({
         ],
         display: [
           {
-            name: 'Poppins',
+            name: 'Montserrat',
             weights: ['300', '400', '500', '600', '700', '800', '900'],
           },
           {
@@ -31,30 +31,29 @@ export default defineConfig({
   theme: {
     colors: {
       primary: {
-        '50': 'rgb(239 246 255)',
-        '300': 'rgb(147 197 253)',
-        '500': 'rgb(59 130 246)',
-        '600': 'rgb(37 99 235)',
-        '950': 'rgb(11 23 39)',
+        DEFAULT: '#3CACE2',
+        50: '#E7F5FB',
+        100: '#CFEAF8',
+        200: '#9ED6F0',
+        300: '#6DC1E9',
+        400: '#3CACE2',
+        500: '#1F94CC',
+        600: '#1874A0',
+        700: '#115474',
+        800: '#0B3447',
+        900: '#04141B',
+        950: '#010305',
       },
-      // Example: switching out theme colors
-      // primary: {
-      //   '50': '#fef2f2',
-      //   '300': '#fca5a5',
-      //   '500': '#ef4444',
-      //   '600': '#dc2626',
-      //   '950': '#450a0a',
-      // },
     },
     borderRadius: {
       // Input field corner radius
       input: '.25rem',
       // Button corner radius - set to '100rem' for fully rounded buttons!
-      btn: '.5rem',
+      btn: '.25rem',
       // Larger buttons with more content inside
-      bigbtn: '.75rem',
+      bigbtn: '.5rem',
       // General "card" UI corner radius
-      card: '1rem',
+      card: '.75rem',
     },
   },
 });

@@ -27,7 +27,7 @@ export default function AccountPage() {
     <>
       <Head title="Account Settings" />
       <DashBlock header="Account Settings">
-        <div className="mt-4 text-gray-500 font-400">
+        <div className="mt-4 text-neutral-400 font-400">
           <p className="md:inline">Manage your {SHORT_COMPANY_NAME} account.</p>
           <ButtonLink
             to={`mailto:${SUPPORT_EMAIL}`}
@@ -40,7 +40,9 @@ export default function AccountPage() {
         </div>
       </DashBlock>
       <DashBlock>
-        <h3 className="text-xl font-display">Profile</h3>
+        <h3 className="text-xl font-semibold font-display uppercase">
+          Profile
+        </h3>
         <ul className="grid mt-4 gap-x-4 gap-y-6 lg:grid-cols-2">
           {[
             { description: 'User ID', value: user_uuid },
@@ -51,14 +53,14 @@ export default function AccountPage() {
             { description: 'Account Balance', value: formattedBalance },
           ].map(({ description, value }) => (
             <li key={description}>
-              <label className="text-sm text-gray-500 font-400 tracking-wide font-display">
+              <label className="text-sm text-neutral-400 font-400 tracking-wide font-display">
                 {description}
               </label>
-              <div className="mt-1 flex items-center rounded-input bg-gray-50/50 px-4 py-2 shadow-inner ring-1 ring-gray-200">
+              <div className="mt-1 flex items-center rounded-input bg-neutral-800 px-4 py-2">
                 {value ?? 'Loading...'}
                 {value !== undefined && (
                   <button
-                    className="i-tabler-copy ml-auto text-sm text-gray-400 transition-colors hover:text-gray-600"
+                    className="i-tabler-copy ml-auto text-sm text-neutral-300 transition-colors hover:text-neutral-400"
                     onClick={() => {
                       navigator.clipboard.writeText(value.toString());
                       toast.success('Copied to clipboard!');

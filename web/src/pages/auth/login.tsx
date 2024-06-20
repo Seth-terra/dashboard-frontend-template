@@ -42,7 +42,7 @@ export default function LoginPage() {
       <Head title="Log In" />
       <div className="flex items-center">
         <h1 className="text-2xl font-medium font-display">Login</h1>
-        <div className="ml-auto text-sm text-gray-500">
+        <div className="ml-auto text-sm text-neutral-400">
           New user?{' '}
           <Link
             to={ROUTES.signup}
@@ -72,7 +72,7 @@ export default function LoginPage() {
         />
         <Link
           to={ROUTES.resetPassword}
-          className="text-sm text-gray-500 underline"
+          className="text-sm text-neutral-400 underline"
         >
           <span className="i-tabler-help mr-1 inline-block translate-y-[.15em]" />
           Forgot your password?

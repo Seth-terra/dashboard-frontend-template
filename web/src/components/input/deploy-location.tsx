@@ -65,13 +65,13 @@ export default function DeployLocationInput({
                 </div>
                 <div className="mt-4 flex flex-wrap gap-3 text-sm">
                   <p
-                    className={`rounded-full px-4 py-1 ring-1 ring-primary-500/30 ${isSelected ? 'ring-white/30' : 'text-primary-500'}`}
+                    className={`rounded-full px-4 py-1 ring-1 ring-primary-400/40 ${isSelected ? 'ring-white/30' : 'text-primary-300'}`}
                   >
                     <span className="i-tabler-clock mr-2 inline-block translate-y-[.125em]" />
                     {uptime}% uptime
                   </p>
                   <p
-                    className={`rounded-full px-4 py-1 ring-1 ${isSelected ? 'ring-white/30 ring-primary-500/30' : 'text-gray-500 ring-gray-300'}`}
+                    className={`rounded-full px-4 py-1 ring-1 ${isSelected ? 'ring-white/30 ring-primary-500/30' : 'text-neutral-300 ring-neutral-500'}`}
                   >
                     <span
                       className={`mr-2 inline-block translate-y-[.125em] ${
