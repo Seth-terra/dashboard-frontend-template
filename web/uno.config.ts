@@ -3,7 +3,7 @@ import { defineConfig, presetIcons, presetUno, presetWebFonts } from 'unocss';
 export default defineConfig({
   presets: [
     // To force dark/light mode, set this to { dark: 'class' } and (for dark mode) add the `dark` class to `body` in `index.html`.
-    presetUno({ dark: 'media' }),
+    presetUno({ dark: 'class' }),
     presetIcons(),
     presetWebFonts({
       provider: 'google',
@@ -50,7 +50,7 @@ export default defineConfig({
     },
     borderRadius: {
       // Input field corner radius
-      input: '.5rem',
+      input: '.25rem',
       // Button corner radius - set to '100rem' for fully rounded buttons!
       btn: '.25rem',
       // Larger buttons with more content inside
