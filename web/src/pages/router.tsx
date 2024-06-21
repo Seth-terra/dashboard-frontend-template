@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   { path: '*', element: <NotFoundPage /> },
   {
     path: '/',
-    element: <Redirect to={ROUTES.deploy} />,
+    element: <Redirect to={ROUTES.deployForm} />,
   },
   {
     element: <DashLayout />,
