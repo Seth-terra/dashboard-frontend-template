@@ -16,7 +16,7 @@ export const ALLOWED_GPUS: GpuModel[] = [
   'rtx6000ada-pcie-48gb',
 ];
 
-export const SINGLE_LOCATION = false;
+export const SINGLE_LOCATION = true;
 
 export const ALLOWED_OS: OperatingSystem[] = [
   'Ubuntu 20.04 LTS',
