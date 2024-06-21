@@ -1,5 +1,5 @@
 export const ROUTES = {
-  home: '/',
+  home: 'https://terracompute.ai/',
   deploy: '/deploy',
   automations: '/automations',
   automationsAdd: '/automations/add',

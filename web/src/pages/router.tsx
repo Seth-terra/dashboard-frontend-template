@@ -3,6 +3,8 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
+import Redirect from '../components/redirect';
+import { ROUTES } from '../constants';
 import ChangePasswordPage from './auth/change-password';
 import AuthLayout from './auth/layout';
 import LoginPage from './auth/login';
@@ -19,13 +21,12 @@ import NotFoundPage from './notfound';
 const SignupPage = React.lazy(() => import('./auth/signup'));
 const DepositFundsPage = React.lazy(() => import('./dash/account-deposit'));
 const DeployPage = React.lazy(() => import('./dash/deploy'));
-const HomePage = React.lazy(() => import('./home'));
 
 const router = createBrowserRouter([
   { path: '*', element: <NotFoundPage /> },
   {
     path: '/',
-    element: <HomePage />,
+    element: <Redirect to={ROUTES.deploy} />,
   },
   {
     element: <DashLayout />,
