@@ -1,6 +1,7 @@
 export const ROUTES = {
   home: 'https://terracompute.ai/',
   deploy: '/deploy',
+  deployForm: '/deploy?scroll=true',
   automations: '/automations',
   automationsAdd: '/automations/add',
   login: '/login',
