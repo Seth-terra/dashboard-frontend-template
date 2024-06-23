@@ -38,7 +38,7 @@ export default function AuthLayout() {
                 <img
                   src={HOME_LOGO_IMAGE}
                   alt={LOGO_TEXT}
-                  className="h-[.9em] py-[.05em]"
+                  className="h-[2.5em] py-2"
                 />
               ) : (
                 LOGO_TEXT
