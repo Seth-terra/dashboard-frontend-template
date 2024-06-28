@@ -163,7 +163,7 @@ export default function DeployPage() {
     <>
       <Head title={`Deploy a cloud GPU`} />
       <div id="form">
-        <DashBlock header="Deploy a new cloud GPU">
+        <DashBlock header="Deploy a new performance cloud GPU">
           <div className="mt-4 text-gray-500 font-400 dark:text-neutral-400">
             <p>Customize your own server, fully a la carte.</p>
             <ButtonLink
