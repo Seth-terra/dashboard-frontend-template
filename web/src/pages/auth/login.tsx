@@ -54,7 +54,7 @@ export default function LoginPage() {
         </div>
       </div>
       <div
-        <p></p>TerraCompute.ai offers unparalleled high-performance Network Cloud GPU services designed to supercharge your workflows while significantly saving money. Leveraging the latest NVIDIA GPUs and an ultra-fast fiber network, we provide scalable, pay-as-you-go solutions that integrate seamlessly into your existing infrastructure.</p>
+        <p><TerraCompute.ai offers unparalleled high-performance Network Cloud GPU services designed to supercharge your workflows while significantly saving money. Leveraging the latest NVIDIA GPUs and an ultra-fast fiber network, we provide scalable, pay-as-you-go solutions that integrate seamlessly into your existing infrastructure.</p>
      </div>  
     <form
         className="mb-2 mt-4 flex flex-col gap-4"
